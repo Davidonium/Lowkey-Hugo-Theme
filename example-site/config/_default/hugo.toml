@@ -7,7 +7,7 @@ title = 'Enhanced Lowkey Hugo'
 enableRobotsTXT = true
 summaryLength = 15
 paginate = 5
-
+math = false
 
 [markup]
   [markup.highlight]
