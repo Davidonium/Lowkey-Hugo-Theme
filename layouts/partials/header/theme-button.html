@@ -7,7 +7,9 @@
   document.addEventListener('DOMContentLoaded', function () {
     const theme = localStorage.getItem('theme');
 
-    if (!theme || theme === 'light') {
+    // html dom element contains the dark class, so it will default to it.
+    // if the system prefers light, set it.
+    if (theme === "light" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: light)").matches)) {
       setTheme('light');
     } else {
       setTheme(theme);
